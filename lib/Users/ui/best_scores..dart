@@ -30,7 +30,7 @@ class _BestScores extends State<BestScores>{
         builder: (context, AsyncSnapshot snapshot){
           switch (snapshot.connectionState) {
             case ConnectionState.waiting:
-              return Center(child: CircularProgressIndicator(backgroundColor: Colors.white));
+              return Center(child: CircularProgressIndicator(backgroundColor: Colors.white, valueColor: new AlwaysStoppedAnimation<Color>(Colors.green[900])));
               break;
             case ConnectionState.done:
               return returnView(userBloc.getScores(snapshot.data.documents));
@@ -39,7 +39,7 @@ class _BestScores extends State<BestScores>{
               return returnView(userBloc.getScores(snapshot.data.documents));
               break;
             case ConnectionState.none:
-              return Center(child: CircularProgressIndicator(backgroundColor: Colors.white));
+              return Center(child: CircularProgressIndicator(backgroundColor: Colors.white, valueColor: new AlwaysStoppedAnimation<Color>(Colors.green[900])));
               break;
             default:
               return Center(child: CircularProgressIndicator(backgroundColor: Colors.white));
