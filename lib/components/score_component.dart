@@ -21,7 +21,7 @@ class ScoreComponent {
     textStyle = TextStyle(
       color: Color(0xffffffff),
       fontSize: 14,
-      fontFamily: "GameFont",
+      fontFamily: "8bitpusab",
       shadows: <Shadow>[
         Shadow(
           blurRadius: 7,
@@ -47,7 +47,7 @@ class ScoreComponent {
       style: textStyle,
     );
     painter.layout();
-    position = Offset(screenSize.width-140, 20);
+    position = Offset(screenSize.width-175, 20);
   }
 
   void reset(){

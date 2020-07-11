@@ -3,7 +3,10 @@ import 'package:flame/util.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:virusapp/Users/bloc/bloc_user.dart';
 import 'package:virusapp/virus_game.dart';
+import 'package:virusapp/virus_game_ui.dart';
 
 
 main() async {
@@ -12,11 +15,39 @@ main() async {
   Util flameUtil = Util();
   await flameUtil.fullScreen();
   await flameUtil.setOrientation(DeviceOrientation.portraitUp);
-  VirusGame game = VirusGame();
+  VirusGameUI gameUI =  VirusGameUI();
+  VirusGame game = VirusGame(gameUI.state);
   TapGestureRecognizer tapper = TapGestureRecognizer();
   tapper.onTapDown = game.onTapDown;
   flameUtil.addGestureRecognizer(tapper);
-  runApp(game.widget);
+
+  runApp(
+    BlocProvider(
+      child: MaterialApp(
+        title: 'Pandemic Attack!',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: Scaffold(
+          body: Stack(
+            //fit: StackFit.expand,
+            children: [
+              Positioned.fill(
+                child: GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTapDown: game.onTapDown,
+                  child: game.widget,
+                ),
+              ),
+              gameUI
+            ],
+          ),
+        ),
+        debugShowCheckedModeBanner: false,
+      ),
+      bloc: UserBloc(),
+    )
+  );
 }
 
 loadResources(){
