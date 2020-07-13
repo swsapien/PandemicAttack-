@@ -11,6 +11,7 @@ class TimeScoreComponent {
   TextPainter painter;
   TextStyle textStyle;
   Offset position;
+  String elapsed;
 
   TimeScoreComponent(this.game){
     painter = TextPainter(
@@ -30,7 +31,7 @@ class TimeScoreComponent {
     textStyle = TextStyle(
       color: Color(0xffffffff),
       fontSize: 14,
-      fontFamily: "GameFont",
+      fontFamily: "8bitpusab",
       shadows: <Shadow>[
         Shadow(
           blurRadius: 7,
@@ -48,9 +49,9 @@ class TimeScoreComponent {
   }
 
   void update(double t) {
-
+      elapsed = "${elapsedMins.toString() }:${elapsedSecs.toString() }";
       painter.text = TextSpan(
-        text: "Time: ${elapsedMins.toString() }:${elapsedSecs.toString() }",
+        text: "Time: $elapsed",
         style: textStyle,
       );
       painter.layout();

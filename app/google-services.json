@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1068158952543",
+    "firebase_url": "https://pandemiattack.firebaseio.com",
+    "project_id": "pandemiattack",
+    "storage_bucket": "pandemiattack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068158952543:android:37ef835182ee5da0d927ea",
+        "android_client_info": {
+          "package_name": "com.virusapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068158952543-uo9lkf1if425j13cdq0i25ngr7juo55o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.virusapp",
+            "certificate_hash": "55409b2a875377f1f1161f14f7a56765ec86b832"
+          }
+        },
+        {
+          "client_id": "1068158952543-l9fi9vma2n4qf7p0e6284jhp1r4r75gt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDakrt39HPqanLZ8jRegimYcBZWmLY6fJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068158952543-l9fi9vma2n4qf7p0e6284jhp1r4r75gt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

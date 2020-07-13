@@ -20,8 +20,8 @@ class TryAgainComponent {
 
     textStyle = TextStyle(
       color: Color(0xffffffff),
-      fontSize: 24,
-      fontFamily: "GameFont",
+      fontSize: 20,
+      fontFamily: "8bitpusab",
       shadows: <Shadow>[
         Shadow(
           blurRadius: 7,
@@ -41,7 +41,7 @@ class TryAgainComponent {
       style: textStyle,
     );
     painter.layout();
-    position = Offset(screenSize.width/2 - painter.width /2 , screenSize.height/1.3);
+    position = Offset(screenSize.width/2 - painter.width /2 , screenSize.height/1.8);
     painter.paint(c, position);
   }
 
