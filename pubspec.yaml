@@ -12,7 +12,9 @@ dependencies:
   flame: ^0.19.1
   audioplayers:
   cupertino_icons: ^0.1.2
-
+  cloud_firestore: ^0.13.5
+  generic_bloc_provider: ^1.0.9
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -40,3 +42,6 @@ flutter:
     - family: GameFont
       fonts:
         - asset: assets/fonts/game_font.ttf
+    - family: 8bitpusab
+      fonts:
+        - asset: assets/fonts/8bitpusab.ttf
